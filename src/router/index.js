@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import FoodView from '../views/FoodView.vue'
 import DrinkView from '../views/DrinkView.vue'
 import FavosView from '../views/FavosView.vue'
+import AboutView from '@/views/AboutView.vue'
 
 const routes = [
     {
@@ -24,6 +25,11 @@ const routes = [
       path: '/favorites',
       name: 'favorites',
       component: FavosView,
+    },
+    {
+      path: '/twighlight-about',
+      name: 'twighlight-about',
+      component: AboutView,
     },
 ];
 
