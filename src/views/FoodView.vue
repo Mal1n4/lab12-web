@@ -1,10 +1,9 @@
-
 <template>
   <header>
     <Header/>
   </header>
   <main>
-    <MainContent/>
+    <FoodContent/>
   </main>
   <footer>
     <Footer/>
@@ -12,10 +11,11 @@
 </template>
 
 <style>
+
 </style>
 
 <script setup>
     import Header from '@/components/header.vue'
     import Footer from '@/components/footer.vue'
-    import MainContent from '@/components/main_page.vue'
+    import FoodContent from '@/components/food_page.vue'
 </script>
