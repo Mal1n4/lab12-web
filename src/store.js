@@ -9,7 +9,10 @@ export const PonyStore = defineStore('counter', {
                 name: 'Искорка',
                 mark: '/src/assets/tsm.png',
                 pony: '/src/assets/ts.png',
-                link: '/twighlight-about'
+                link: '/twighlight-about',
+                engname: null, 
+                kind: null, 
+                image: null, 
             },
             {
                 name: 'Рарити',
@@ -45,13 +48,16 @@ export const PonyStore = defineStore('counter', {
     }),
     actions: {
             async getApidata() {
-                // делаем запрос на сервер
                 const response = await fetch(
                     `https://ponyapi.net/v1/character/all`
                 );
-                // преобразуем в объект
                 const result = await response.json();
                 this.fetchdata=result
+                this.aradata[0].engname=result.data[0].name
+                this.aradata[0].kind=result.data[0].kind
+                this.aradata[0].image=result.data[0].image
+
+
                 console.log( this.fetchdata)
             }
         },

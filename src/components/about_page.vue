@@ -1,6 +1,12 @@
 <template>
   <div class="main-content">
-    <h1>{{ store.fetchdata.data[0].name }}</h1>
+    <h1 class="name text-center"> {{ store.aradata[0].engname }} </h1>
+    <p class="text-center">Тип пони: {{ store.aradata[0].kind }}</p>
+    <li v-for="item in store.aradata[0].image" style="list-style-type: none; " class="d-flex justify-content-center">
+          <div>
+            <img :src="item" alt="Пони" class="m-5">
+          </div>
+      </li>
   </div>
 </template>
 

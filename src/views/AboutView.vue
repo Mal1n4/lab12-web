@@ -1,7 +1,5 @@
 <template>
-  <header>
     <Header/>
-  </header>
   <main>
     <About/>
   </main>
