@@ -13,6 +13,9 @@ export const PonyStore = defineStore('counter', {
                 engname: null, 
                 kind: null, 
                 image: null, 
+                residence: null,
+                occupation: null,
+                wiki: null
             },
             {
                 name: 'Рарити',
@@ -55,6 +58,9 @@ export const PonyStore = defineStore('counter', {
                 this.fetchdata=result
                 this.aradata[0].engname=result.data[0].name
                 this.aradata[0].kind=result.data[0].kind
+                this.aradata[0].residence=result.data[0].residence
+                this.aradata[0].occupation=result.data[0].occupation
+                this.aradata[0].wiki=result.data[0].url
                 this.aradata[0].image=result.data[0].image
 
 
