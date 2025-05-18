@@ -42,8 +42,9 @@ export const PonyStore = defineStore('counter', {
                 link: '/pinkiepie-about'
             },
         ],
-        actions: {
-            async getApidata () {
+    }),
+    actions: {
+            async getApidata() {
                 // делаем запрос на сервер
                 const response = await fetch(
                     `https://ponyapi.net/v1/character/all`
@@ -54,5 +55,4 @@ export const PonyStore = defineStore('counter', {
                 console.log( this.fetchdata)
             }
         },
-    }),
 })
