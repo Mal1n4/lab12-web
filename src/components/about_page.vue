@@ -1,20 +1,25 @@
 <template>
   <div class="main-content">
     <h1 class="name text-center"> {{ store.aradata[0].engname }} </h1>
-    <p class="text-center">Тип пони: </p>
+    <h3 class="text-center mt-5">Тип персонажа </h3>
     <li v-for="item in store.aradata[0].kind" style="list-style-type: none; " class="d-flex justify-content-center">
           <div>
             <p> {{item }}</p>
           </div>
-      </li>
-    <p class="text-center">Резиденция: {{ store.aradata[0].residence }}</p>
-    <p class="text-center">Деятельность: {{ store.aradata[0].occupation }}</p>
-    <a class="d-flex justify-content-center">Страница Wiki: {{ store.aradata[0].wiki }}</a>
+    </li>
+    <h3 class="text-center mt-5">Дом</h3>
+    <p class="text-center">{{ store.aradata[0].residence }}</p>
+    <h3 class="text-center mt-5">Деятельность</h3>
+    <p class="text-center">{{ store.aradata[0].occupation }}</p>
+    <h3 class="text-center mt-5">Страница Wiki</h3>
+    <p class="d-flex justify-content-center">{{ store.aradata[0].wiki }}</p>
+    <h3 class="text-center mt-5">Галерея</h3>
     <li v-for="item in store.aradata[0].image" style="list-style-type: none; " class="d-flex justify-content-center">
           <div>
             <img :src="item" alt="Пони" class="m-5">
           </div>
-      </li>
+    </li>
+
   </div>
 </template>
 
@@ -44,5 +49,5 @@ a {
   import { PonyStore } from '@/store'
   const store = PonyStore()
   store.getApidata()
-
+  const link  = store.aradata[0].wiki;
 </script>
