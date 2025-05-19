@@ -4,6 +4,7 @@ import FoodView from '../views/FoodView.vue'
 import DrinkView from '../views/DrinkView.vue'
 import FavosView from '../views/FavosView.vue'
 import AboutView from '@/views/AboutView.vue'
+import ContactView from '@/views/ContactView.vue'
 
 const routes = [
     {
@@ -30,6 +31,11 @@ const routes = [
       path: '/twighlight-about',
       name: 'twighlight-about',
       component: AboutView,
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: ContactView,
     },
 ];
 

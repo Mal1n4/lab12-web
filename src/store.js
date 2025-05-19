@@ -67,24 +67,25 @@ export const PonyStore = defineStore('counter', {
                 console.log( this.fetchdata)
             },
             sendmessage() {
-        //  создаем объект который необходимо направить по api
-            let ContactForm = {
-                title: this.firstname,
-                body: this.secondname,
-            };
-       //  указываем адрес
-            fetch('https://jsonplaceholder.typicode.com/posts', {
-                method: 'POST',
-       // преобразуем наш объект в json формат
-                body: JSON.stringify({
-                    ContactForm
-                }),
-       // устанавливаем заголовки в котором будет написано что форма json
-                headers: {
-                    'Content-type': 'application/json; charset=UTF-8',
-                },
-            })
+                //  создаем объект который необходимо направить по api
+                let ContactForm = {
+                    title: this.nickname,
+                    body: this.msg,
+
+                };
+                //  указываем адрес
+                fetch('https://jsonplaceholder.typicode.com/posts', {
+                    method: 'POST',
+                // преобразуем наш объект в json формат
+                    body: JSON.stringify({
+                        ContactForm
+                    }),
+                // устанавливаем заголовки в котором будет написано что форма json
+                    headers: {
+                        'Content-type': 'application/json; charset=UTF-8',
+                    },
+                })
                 .then((response) => console.log(response.json()))
-        },
+            },
     }
 })

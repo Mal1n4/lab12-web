@@ -1,6 +1,6 @@
 <template>
   <div class="main-content">
-    <div class="d-flex justify-content-center mb-5">{{ store.name }}</div>
+    <h3 class="d-flex justify-content-center mb-5">{{ store.name }}</h3>
     <ul class="w-75 d-flex justify-content-end">
       <li style="list-style-type: none; " class="list-group list-group-horizontal col-8">
           <div class="list-group-item flex-fill col-4">
@@ -22,6 +22,8 @@
           </div>
       </li>
     </ul>
+    <h3  class="d-flex justify-content-center mt-5">Нет твоего персонажа? Напиши нам!</h3>
+    <RouterLink to="/contact"><button class="btn btn-light contact mt-2 ">Написать</button></RouterLink>
   </div>
 </template>
 
@@ -33,6 +35,10 @@
 
 #list {
   margin-left: 24.3%;
+}
+
+.contact{
+  margin-left: 48%;
 }
 
 .router-link-exact-active,
